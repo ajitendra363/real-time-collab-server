@@ -12,13 +12,13 @@ const httpServer = http.createServer(app);
 
 const io = new Server(httpServer, {
     cors: {
-        origin: ['http://localhost:5173', 'https://real-time-collab-client.vercel.app'],
+        origin: ['http://localhost:5173', 'http://localhost:3000', 'https://real-time-collab-client.vercel.app'],
         methods: ['GET', 'POST']
     }
 });
 
 app.use(cors({
-    origin: ['http://localhost:5173', 'https://real-time-collab-client.vercel.app'],
+    origin: ['http://localhost:5173', 'http://localhost:3000', 'https://real-time-collab-client.vercel.app'],
     methods: ['GET', 'POST']
 }));
 app.use(express.json());
